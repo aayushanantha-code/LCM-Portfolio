@@ -1,0 +1,17 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the video background */
+.video-background {
+  position: absolute; /* Position it relative to the page */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Ensure it covers the entire viewport */
+  z-index: -1; /* Place the video behind the content */
+}
