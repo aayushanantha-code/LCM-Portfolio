@@ -1,0 +1,49 @@
+.education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh;
+  margin-top: 55vh;
+}
+
+.education-title {
+  text-align: center;
+  font-size: 7vh;
+  margin-bottom: 3vh;
+}
+
+.education-content {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 90%;
+}
+
+.education-left-container,
+.education-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  margin: 2vh;
+}
+
+.ga-tech-logo,
+.uga-logo {
+  width: 50%;
+  height: auto;
+  margin-bottom: 2vh;
+}
+
+.uga-logo {
+  margin-bottom: 4.5vh;
+}
+
+.ga-tech-title,
+.uga-title,
+.uga-major,
+.ga-tech-major {
+  text-align: center;
+  margin: 1vh 0;
+  font-size: 2.5vh;
+}

@@ -1,0 +1,17 @@
+.content {
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Cardo", serif;
+}
+
+a {
+  font-family: "Cardo", serif;
+}
+.app {
+  background-color: #f5f5dc;
+}

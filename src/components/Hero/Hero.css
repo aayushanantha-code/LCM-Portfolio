@@ -1,0 +1,51 @@
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 7vh;
+  width: 100%;
+}
+
+.memoji-container {
+  display: flex;
+  align-items: center; /* Centers the image vertically */
+  justify-content: center; /* Centers the image horizontally */
+  width: 40%;
+}
+
+.memoji {
+}
+
+.memoji-container img {
+  max-width: 100%; /* Ensures the image doesn’t stretch beyond container */
+  height: auto;
+  padding-top: 10vh;
+}
+
+.hero-right-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Aligns text to the left */
+  margin-left: 1vh;
+}
+.hero-greeting {
+  font-size: 5rem; /* Adjust font size as needed */
+  font-weight: 700; /* Bold font */
+  margin-bottom: 1vh;
+  padding-top: 0vh;
+}
+.typewriter-text {
+  display: inline-flex;
+  align-items: center;
+  font-size: 3rem; /* Adjust font size as needed */
+  margin-left: 5vh;
+  justify-content: center;
+}
+.typewriter-text span {
+  display: inline-block;
+  overflow: hidden;
+  margin-left: 4vh;
+}
