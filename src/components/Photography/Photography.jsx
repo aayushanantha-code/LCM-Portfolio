@@ -37,9 +37,13 @@ const Photography = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center bg-tan h-screen">
-        <h1 className="text-6xl lg:text-8xl font-extrabold font-serif text-black">
+        <motion.h1
+          initial={{ y: -100, opacity: 0 }} // Start above the viewport and invisible
+          animate={{ y: 0, opacity: 1 }} // Slide into place and fade in
+          transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+          className="text-6xl lg:text-8xl font-extrabold font-serif text-black">
           Photography
-        </h1>
+        </motion.h1>
       </div>
       <div className="relative flex items-center flex-col justify-center bg-darkgreen h-screen">
         <div className="flex justify-center">

@@ -2,6 +2,8 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import memoji from "../../assets/memoji2.png";
 import "./Hero.css";
+import { motion } from "framer-motion";
+import { FaEnvelope, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Hero = () => {
   const phrases = [
@@ -22,13 +24,47 @@ const Hero = () => {
     <>
       {/* Hero Container */}
       <div className="flex flex-col justify-center items-center bg-tan h-screen">
-        <h1 className="text-6xl lg:text-8xl font-extrabold font-serif text-black">
+        <motion.h1
+          initial={{ y: -100, opacity: 0 }} // Start above the viewport and invisible
+          animate={{ y: 0, opacity: 1 }} // Slide into place and fade in
+          transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+          className="text-6xl lg:text-8xl font-extrabold font-serif text-black">
           Hey! I'm Aayush
-        </h1>
+        </motion.h1>
         <h2 className="mt-4 text-xl lg:text-2xl text-black font-medium">
           a <span>{text}</span>
           <Cursor cursorBlinking={true} cursorStyle="|" cursorColor="#ff5722" />
         </h2>
+        {/* Social Icons */}
+        <div className="flex gap-6 mt-8">
+          {/* Email Icon */}
+          <a
+            href="mailto:aanantha9@gatech.edu"
+            className="text-3xl text-black hover:text-[#2f4f4f] transition-transform"
+            title="Email Me">
+            <FaEnvelope />
+          </a>
+
+          {/* LinkedIn Icon */}
+          <a
+            href="https://www.linkedin.com/in/aayush-anantha-gt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl text-black hover:text-[#0077b5] transition-transform"
+            title="LinkedIn">
+            <FaLinkedin />
+          </a>
+
+          {/* Instagram Icon */}
+          <a
+            href="https://www.instagram.com/aayushanantha/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl text-black hover:text-[#e4405f] transition-transform"
+            title="Instagram">
+            <FaInstagram />
+          </a>
+        </div>
       </div>
 
       {/* Hero Content Container */}

@@ -4,6 +4,7 @@ import Experience from "../Experience/Experience";
 import Skills from "../Skills/Skills";
 import Projects from "../Projects/Projects";
 import "./Resume.css";
+import { motion } from "framer-motion";
 
 const Resume = () => {
   const [educationData, setEducationData] = useState(true);
@@ -15,9 +16,13 @@ const Resume = () => {
     <div className="resume-section">
       {/* Header Section */}
       <div className="flex flex-col justify-center items-center bg-tan h-screen">
-        <h1 className="text-6xl lg:text-8xl font-extrabold font-serif text-black">
+        <motion.h1
+          initial={{ y: -100, opacity: 0 }} // Start above the viewport and invisible
+          animate={{ y: 0, opacity: 1 }} // Slide into place and fade in
+          transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+          className="text-6xl lg:text-8xl font-extrabold font-serif text-black">
           Resume
-        </h1>
+        </motion.h1>
       </div>
 
       {/* Fixed Title and Tabs */}

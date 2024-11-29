@@ -1,6 +1,7 @@
 .navbar {
   background-color: transparent; /* Ensure the navbar is transparent */
-  padding: 20px 5vw; /* Add padding for spacing */
+  padding: 30px 5vw; /* Add padding for spacing */
+  padding-top: 30px;
 }
 
 .navbar a {
@@ -9,6 +10,16 @@
 
 .navbar a:hover {
   transform: scale(1.1); /* Slightly grow on hover */
-  color: #3b3a30; /* Change color on hover */
+  color: #2f4f4f; /* Change color on hover */
   cursor: pointer; /* Add pointer cursor */
+}
+
+/* Adjustments for logo */
+.logo {
+  margin-left: 2rem; /* Add margin to bring it away from the edge */
+}
+
+/* Adjustments for links */
+.nav-links {
+  margin-right: 2rem; /* Add margin to bring it away from the right edge */
 }
