@@ -1,0 +1,38 @@
+/* Light text color for contrast */
+.text-light {
+  color: #f5f5dc; /* Beige-like color to contrast with dark green */
+}
+
+/* Padding and font styling */
+.text-lg {
+  font-size: 1.125rem; /* Medium font size */
+  line-height: 1.6; /* Improve readability */
+}
+
+.font-serif {
+  font-family: "serif"; /* Match the rest of the website's typography */
+}
+
+.text-center {
+  text-align: center; /* Center align the text */
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem; /* Add spacing below the paragraph */
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Carousel specific adjustments */
+.carousel-container {
+  position: relative;
+  height: 70%; /* Leave space for the text above */
+}
+
+.text-container {
+  padding-top: 3rem; /* Add spacing above the text */
+  z-index: 1; /* Ensure text stays visible */
+}

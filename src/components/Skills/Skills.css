@@ -1,3 +1,4 @@
+/* Container */
 .skills-container {
   width: 100%;
   display: flex;
@@ -5,13 +6,18 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
+  padding: 5vh 2vw;
+  background-color: #c6d5c6;
+  padding-bottom: 75px;
 }
 
+/* Content Wrapper */
 .skills-content {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px; /* Wider max width for responsiveness */
 }
 
+/* Header */
 .skills-header {
   padding: 24px 0;
   display: flex;
@@ -20,37 +26,44 @@
 }
 
 .skills-subtitle {
-  font-size: 0.875rem;
+  font-size: 1rem; /* Slightly larger for better visibility */
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: #6a67ce;
+  color: #768fad; /* Muted accent color */
 }
 
 .skills-title {
-  font-size: 2rem;
+  font-size: 3rem; /* Match overall site fonts */
   font-weight: bold;
+  font-family: "serif"; /* Serif font for consistency */
+  color: #333;
 }
 
+/* Skills List */
 .skills-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px; /* Increase spacing for readability */
 }
 
+/* Individual Skill */
 .skill {
   overflow-x: hidden;
 }
 
 .skill-name {
-  font-size: 0.875rem;
+  font-size: 1rem; /* Match responsive font size */
   font-weight: 500;
   text-transform: uppercase;
+  color: #ff5722; /* Highlight skill name */
+  font-family: "serif";
 }
 
+/* Skill Bar */
 .skill-bar {
   width: 100%;
-  height: 8px;
-  background-color: #768fad;
+  height: 8px; /* Keep consistent bar height */
+  background-color: #768fad; /* Subtle background for bar */
   border-radius: 4px;
   margin-top: 8px;
   position: relative;
@@ -60,13 +73,31 @@
   display: inline-block;
   height: 100%;
   border-radius: 4px;
-  background: linear-gradient(to right, #1e3a8a, #f43f5e, #e11d48);
+  background: linear-gradient(90deg, #42a5f5, #90caf9); /* Cool gradient */
   position: relative;
 }
 
+/* Skill Percentage */
 .skill-percent {
   position: absolute;
-  top: -20px;
+  top: -30px;
   right: 0;
-  font-size: 0.75rem;
+  font-size: 0.875rem; /* Match font size with site design */
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2.5rem; /* Adjust title size for smaller screens */
+  }
+
+  .skills-subtitle {
+    font-size: 0.875rem; /* Adjust subtitle size for smaller screens */
+  }
+
+  .skill-name {
+    font-size: 0.875rem; /* Adjust skill name size */
+  }
 }

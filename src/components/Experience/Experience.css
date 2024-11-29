@@ -5,8 +5,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem; /* Add padding for spacing */
   gap: 2rem;
+  background-color: #c6d5c6; /* Tan background matching site theme */
 }
 
 /* Header styles */
@@ -15,21 +16,24 @@
 }
 
 .experience-timeline {
-  font-size: 0.875rem;
-  color: var(--design-color, #ff5722); /* Accent color */
+  font-size: 1rem; /* Slightly larger for better visibility */
+  color: #555; /* Subtle accent color */
   letter-spacing: 4px;
+  font-family: "serif";
 }
 
 .experience-title {
-  font-size: 1.875rem;
+  font-size: 2.5rem; /* Match Hero and Skills section font size */
   font-weight: 700;
-  color: var(--primary-text, #fff); /* Default color */
+  color: #333;
+  font-family: "serif";
 }
 
+/* Experience list */
 .experience-list {
   display: flex;
   flex-direction: column;
-  width: 80%; /* Constrain content width */
+  width: 80%;
   max-width: 1200px; /* Prevent it from being too wide */
   gap: 2rem; /* Spacing between cards */
 }

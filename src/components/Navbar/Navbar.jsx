@@ -1,20 +1,41 @@
 import React from "react";
-import "./Navbar.css";
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
-    <div className="navbar-container">
-      <div className="navbar">
-        <div className="logo">
-          <h1>Logo</h1>
+    <div className="navbar flex justify-between items-center fixed top-0 w-full z-50">
+      {/* Logo */}
+      <div className="logo">
+        <Link
+          className="text-2xl font-bold text-black hover:scale-110 transition-transform"
+          to="/">
+          Aayush
+        </Link>
+      </div>
+
+      {/* Navigation Links */}
+      <div className="nav-links flex gap-6">
+        <div className="nav-item">
+          <Link
+            className="text-lg text-black font-medium hover:text-[#2f4f4f] hover:scale-110 transition-transform"
+            to="/">
+            Hero
+          </Link>
         </div>
-        <nav className="links">
-          <a href="#">Home</a>
-          <a href="#">Education</a>
-          <a href="#">Skills</a>
-          <a href="#">Projects</a>
-          <a href="#">Experience</a>
-          <a href="#">Contact</a>
-        </nav>
+        <div className="nav-item">
+          <Link
+            className="text-lg text-black font-medium hover:text-[#2f4f4f] hover:scale-110 transition-transform"
+            to="/resume">
+            Resume
+          </Link>
+        </div>
+        <div className="nav-item">
+          <Link
+            className="text-lg text-black font-medium hover:text-[#2f4f4f] hover:scale-110 transition-transform"
+            to="/photography">
+            Photography
+          </Link>
+        </div>
       </div>
     </div>
   );

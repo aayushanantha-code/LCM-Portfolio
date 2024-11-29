@@ -1,30 +1,48 @@
 /* Center the Projects Title */
+.projects {
+  background-color: #c6d5c6;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 .projects-title-container {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
 }
 
 .projects-title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
+  font-family: "serif";
+  color: #333;
 }
 
 /* Layout for Projects Container */
 .projects-container {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between; /* Equal spacing between cards */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  gap: 2rem; /* Consistent spacing between cards */
+  padding: 0 2rem;
+  max-width: 100%; /* Ensure the container doesn’t shrink */
+  overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
 }
 
 /* Individual Project Container Styling */
 .project-container {
-  background-color: #f9f9f9; /* Light background color for each project box */
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  background: rgba(198, 213, 198, 0.5); /* Light tan background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 300px; /* Fixed width for consistency */
   text-align: center;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-container:hover {
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 /* Image Styling */
@@ -38,24 +56,47 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Separator Line */
-.separator {
-  width: 80%;
-  height: 1px;
-  background-color: #ccc;
-  margin: 10px auto;
+  border-bottom: 2px solid #ddd; /* Separator effect */
 }
 
 /* Title and Description Styling */
 .project-title {
   font-size: 1.5rem;
-  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+  font-family: "serif";
+  margin: 1rem 0;
 }
 
 .project-description {
   font-size: 1rem;
   color: #555;
-  padding: 0 15px 15px;
+  padding: 0 1.5rem 1.5rem;
+  font-family: "serif";
+  line-height: 1.6;
+}
+
+/* GitHub Link Styling */
+.project-link {
+  display: inline-block;
+  color: #333;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #ff5722; /* Highlight GitHub icon on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .projects-container {
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center cards when wrapped */
+  }
+
+  .project-container {
+    width: 90%; /* Full-width cards on small screens */
+    margin-bottom: 2rem; /* Add spacing for wrapped rows */
+  }
 }

@@ -1,49 +1,85 @@
+/* Container */
 .education-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vh;
-  margin-top: 55vh;
+  justify-content: flex-start;
+  padding: 0;
+  margin-top: 50px;
+  width: 100%;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  height: fit-content;
+  background-color: #c6d5c6; /* Use consistent background */
 }
 
+/* Title */
 .education-title {
   text-align: center;
   font-size: 7vh;
-  margin-bottom: 3vh;
+  font-family: "serif"; /* Match Hero font */
 }
 
+/* Content */
 .education-content {
   display: flex;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 90%;
+  flex-direction: row; /* Default row layout */
+  align-items: flex-start;
+  gap: 4rem; /* Spacing between Georgia Tech and UGA */
+  width: 100%;
+  max-width: 1200px; /* Constrain the width */
+  justify-content: center; /* Center the items */
 }
 
+/* Left & Right Containers */
 .education-left-container,
 .education-right-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 45%;
-  margin: 2vh;
+  width: 45%; /* Evenly split width */
+  text-align: center;
 }
 
 .ga-tech-logo,
 .uga-logo {
-  width: 50%;
+  width: 100%; /* Full width of the container */
+  max-width: 150px; /* Constrain maximum size */
   height: auto;
   margin-bottom: 2vh;
+  border-radius: 0; /* Remove rounded edges */
+  box-shadow: none; /* Remove shadow */
+  border: none; /* Ensure there’s no border */
 }
-
-.uga-logo {
-  margin-bottom: 4.5vh;
-}
-
+/* Text Styles */
 .ga-tech-title,
-.uga-title,
-.uga-major,
-.ga-tech-major {
-  text-align: center;
-  margin: 1vh 0;
-  font-size: 2.5vh;
+.uga-title {
+  font-size: 1.8rem; /* Larger size for titles */
+  font-weight: bold;
+  color: #333;
+}
+
+.ga-tech-major,
+.uga-major {
+  font-size: 1.2rem; /* Smaller size for majors */
+  color: #555; /* Muted text color */
+  margin-top: 0.5vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-content {
+    flex-direction: column; /* Stack items on smaller screens */
+    gap: 2rem; /* Reduce gap between stacked items */
+  }
+
+  .ga-tech-title,
+  .uga-title {
+    font-size: 1.5rem; /* Adjust title size */
+  }
+
+  .ga-tech-major,
+  .uga-major {
+    font-size: 1rem; /* Adjust major size */
+  }
 }

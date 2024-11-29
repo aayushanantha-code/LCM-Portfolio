@@ -1,34 +1,23 @@
 import React from "react";
-import video from "./assets/background-video2.mp4";
-import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Hero from "./components/Hero/Hero";
-import Education from "./components/Education/Education";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
-import Experience from "./components/Experience/Experience";
+import Resume from "./components/Resume/Resume";
+import Photos from "./components/Photography/Photography";
+import Navbar from "./components/Navbar/Navbar";
+import { AnimatePresence } from "framer-motion";
+
 function App() {
+  const location = useLocation();
   return (
-    <div className="app">
+    <div>
       <Navbar />
-      <Hero />
-      <Education />
-      <Projects />
-      <Skills />
-      <Experience />
-      <div className="background-video-container">
-        <video autoPlay loop muted playsInline>
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div className="content">
-        <h1>Welcome to My Portfolio</h1>
-        <p>
-          Scroll down to see more content while the video stays as the
-          background.
-        </p>
-      </div>
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Hero />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/photography" element={<Photos />} />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

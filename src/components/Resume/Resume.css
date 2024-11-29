@@ -1,0 +1,119 @@
+/* Resume Section (Applies to Entire Component) */
+.resume-section {
+  width: 100%;
+  background-color: #f5f5dc; /* Complementary background color */
+  color: #333;
+  font-family: "serif";
+  min-height: 100vh; /* Ensure it spans full height */
+  padding-bottom: 40px; /* Add bottom spacing */
+}
+
+/* Fixed Title and Tabs */
+.resume-fixed-container {
+  position: sticky;
+  top: 0;
+  background-color: #f5f5dc; /* Same background as section */
+  padding: 20px 5vw;
+  z-index: 50;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Content Section */
+.resume-content {
+  margin-top: 20px;
+  padding: 20px;
+}
+/* Title Section */
+.resume-title-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.resume-title {
+  font-size: 4rem; /* Match Hero font size */
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.resume-timeline {
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Tabs */
+.resume-select {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.resume-select-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Space between tabs */
+}
+
+.list-item {
+  padding: 10px 20px;
+  border: 2px solid transparent; /* No initial border */
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: all 0.3s ease; /* Smooth transitions */
+  color: #555;
+  background-color: white;
+}
+
+.list-item:hover {
+  border-color: #ddd;
+  transform: scale(1.1); /* Grow slightly on hover */
+}
+
+.list-item.active {
+  border-color: #2f4f4f; /* Highlight active tab */
+  color: #2f4f4f;
+  background-color: rgba(
+    143,
+    151,
+    121,
+    0.2
+  ); /* Soft sage green background for active tab */
+}
+
+/* Dynamic Content Section */
+.resume-content {
+  margin-top: 40px;
+  text-align: left;
+  color: #333;
+  font-size: 1rem;
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-title {
+    font-size: 2.5rem;
+  }
+
+  .resume-timeline {
+    font-size: 1rem;
+  }
+
+  .list-item {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+
+  .resume-select-list {
+    gap: 10px; /* Reduce gap for smaller screens */
+  }
+
+  .resume-content {
+    font-size: 0.9rem;
+  }
+}
